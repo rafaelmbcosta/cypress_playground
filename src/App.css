@@ -1,4 +1,25 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #eaeaea;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 60%;
+  grid-template-rows: 100vh;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5vh 5vh;
+  grid-row-gap: 10px;
+  justify-items: center;
+  grid-template-areas: "h1"
+                       "Buttons"
 }

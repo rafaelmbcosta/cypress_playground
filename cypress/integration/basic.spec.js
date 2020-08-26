@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-const wcaquino = 'https://wcaquino.me/cypress/componentes.html'
 const local = 'http://localhost:3000'
 
 describe('Cypress Basics', () => {
@@ -8,7 +7,7 @@ describe('Cypress Basics', () => {
     cy.visit(local)
 
     cy.title().should('be.equal', 'Cy Playground')
-    cy.title().should('contain', 'Cy')
+    cy.title().should('contain', 'Cy').debug()
 
     cy.title()
       .should('be.equal', 'Cy Playground')
