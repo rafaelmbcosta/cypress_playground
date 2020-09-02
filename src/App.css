@@ -1,13 +1,53 @@
+:root {
+  --color--primary: #fcfafc;
+  --color--secondary: #35006d;
+  --color--accent: #f28411;
+  --border--radius: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #eaeaea;
+}
+
+body {
+  background: var(--color--bg);
+}
+
+input[type="button" i] {
+  border-color: var(--color--secondary);
+  border: 1px solid;
+}
+
+input[type="button" i]:focus {
+  border: 1px solid;
+}
+
+h1 {
+  font-size: 1.7em;
+  color: var(--color--primary)
+}
+
+.btn {
+  padding: 5px;
+  color: inherit;
+  border-color : inherit;
+}
+
+.btn-default {
+  background-color: var(--color--accent);
+  color: #fff;
+  border-color: var(--color--secondary);
+}
+
+.btn-fill {
+  width: 100%;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 60%;
+  grid-template-columns: 40%;
   grid-template-rows: 100vh;
   align-content: center;
   align-items: center;
@@ -15,11 +55,44 @@
 }
 
 .App {
+  width: 100%;
+  border-radius: var(--border--radius);
+  background-color: var(--color--secondary);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5vh 5vh;
+  grid-template-rows: auto;
   grid-row-gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+
+
+.Buttons {
+  grid-column: auto;
+}
+
+.buttons-wrapper {
+  padding: 5px;
+  display: grid;
+  border-radius: var(--border--radius);
+  width: 100%;
   justify-items: center;
-  grid-template-areas: "h1"
-                       "Buttons"
+}
+
+a, p, label {
+  color: var(--color--primary);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 10px;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  justify-content: center;
+}
+
+.playground-title {
+  align-self: center;
 }

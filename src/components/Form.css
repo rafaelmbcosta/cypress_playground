@@ -1,0 +1,38 @@
+@media(min-width: 1024px) {
+  form {
+    background-color: var(--color--secondary);
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 5vh 10vh 10vh auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+  }
+}
+
+@media(max-width: 1024px) {
+  form {
+    background-color: var(--color--secondary);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 15px;
+  }
+}
+@media(max-width: 1024px) {
+  .btnForm {
+    grid-column: 1;
+  }
+}
+
+@media(min-width: 1024px) {
+  .btnForm {
+    grid-column: 1 / span 2;
+  }
+}
+
+input, textarea {
+  background-color: #FFF;
+}

@@ -8,6 +8,6 @@ export default () => {
   }
 
   return(
-    <input type="button" value={basicText} id="buttonBasic" onClick={() => changeText() } />
+    <input type="button" className="btn btn-default" value={basicText} id="buttonBasic" onClick={() => changeText() } />
   )
 }
