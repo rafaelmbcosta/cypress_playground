@@ -1,16 +1,18 @@
 import React from 'react';
 import './Form.css';
+import { TextField } from "@material-ui/core"
+import { AccentButton } from './styled/styledComponents'
 
 export default () => {
   return(
     <form>
-      <label>First Name</label>
-      <input type="text" id="formFirstName" />
-      <label>Last Name:</label>
-      <input type="text" id="formLastName" />
-      <label>Description:</label>
-      <textarea id="formDescription"></textarea>
-      <input type="button" value="Submit" className="btn btnForm btn-default" />
+      <label>FIRST NAME</label>
+      <TextField id="formFirstName" variant="outlined"></TextField>
+      <label>LAST NAME:</label>
+      <TextField id="formLastName" variant="outlined"></TextField>
+      <label>DESCRIPTION:</label>
+      <TextField id="formDescription" variant="outlined"></TextField>
+      <AccentButton variant="contained" className="btnForm">SUBMIT</AccentButton>
     </form>
   )
 }

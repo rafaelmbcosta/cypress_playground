@@ -1,7 +1,8 @@
 :root {
-  --color--primary: #fcfafc;
-  --color--secondary: #35006d;
+  --color--primary: #35006d;
+  --color--secondary: #fcfafc;
   --color--accent: #f28411;
+  --color--accent-2: #d36d00;
   --border--radius: 10px;
 }
 
@@ -9,14 +10,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+label {
+  font-weight: bold;
 }
 
 body {
-  background: var(--color--bg);
+  background: var(--color--primary);
 }
 
 input[type="button" i] {
-  border-color: var(--color--secondary);
+  border-color: var(--color--primary);
   border: 1px solid;
 }
 
@@ -25,6 +31,7 @@ input[type="button" i]:focus {
 }
 
 h1 {
+  text-align: center;
   font-size: 1.7em;
   color: var(--color--primary)
 }
@@ -41,13 +48,17 @@ h1 {
   border-color: var(--color--secondary);
 }
 
+.btn-default:focus, .btn-default:focus-visible, .btn-default:visited {
+  border-color: var(--color--accent-2);
+}
+
 .btn-fill {
   width: 100%;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 40%;
+  grid-template-columns: 30%;
   grid-template-rows: 100vh;
   align-content: center;
   align-items: center;
@@ -66,8 +77,6 @@ h1 {
   justify-content: center;
 }
 
-
-
 .Buttons {
   grid-column: auto;
 }
@@ -80,7 +89,7 @@ h1 {
   justify-items: center;
 }
 
-a, p, label {
+a, p, hr, label {
   color: var(--color--primary);
 }
 

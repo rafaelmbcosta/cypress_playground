@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Button } from '@material-ui/core';
 
 export default () => {
-  const [basicText, setBasicText] = useState('ClickMe!');
+  const [basicText, setBasicText] = useState('CLICK ME !');
 
   const changeText = () => {
-    setBasicText('Thanks!')
+    setBasicText('THANKS !')
   }
 
   return(
-    <input type="button" className="btn btn-default" value={basicText} id="buttonBasic" onClick={() => changeText() } />
+    <div>
+      <Button variant="contained" id="buttonBasic" onClick={() => changeText() }>{basicText}</Button>
+    </div>
   )
 }

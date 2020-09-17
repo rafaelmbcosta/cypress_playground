@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
+
 const delay = { delay: 100 }
+
 describe('Text Elements', () => {
   before(() => {
     cy.visit('http://localhost:3000')
