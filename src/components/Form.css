@@ -1,9 +1,13 @@
+form {
+  background-color: var(--color--form);
+  display: grid;
+
+}
+
 @media(min-width: 1024px) {
   form {
-    background-color: var(--color--secondary);
     width: 100%;
     padding: 20px;
-    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     grid-row-gap: 10px;
@@ -13,18 +17,20 @@
 
 @media(max-width: 1024px) {
   form {
-    background-color: var(--color--secondary);
     padding: 10px;
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-row-gap: 15px;
   }
 }
-.btnForm {
-  grid-column: 1 / span 2;
+
+.radios {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-evenly;
+
 }
 
-input, textarea {
-  background-color: #FFF;
+.btnForm {
+  grid-column: 1 / span 2;
 }

@@ -1,8 +1,8 @@
 :root {
-  --color--primary: #35006d;
-  --color--secondary: #fcfafc;
-  --color--accent: #f28411;
-  --color--accent-2: #d36d00;
+  --color--form: #fff;
+  --color--primary: #cce6f4;
+  --color--secondary: #175676;
+  --color--accent: #d62839;
   --border--radius: 10px;
 }
 
@@ -30,22 +30,28 @@ input[type="button" i]:focus {
   border: 1px solid;
 }
 
+input[type="checkbox"]:checked {
+  background-color: var(--color--accent) !important;
+  color: var(--color--accent) !important;
+
+}
+
+input[type="radio"]:checked {
+  color: var(--color--accent) !important;
+  background-color: var(--color--accent) !important;
+
+}
+
 h1 {
   text-align: center;
   font-size: 1.7em;
-  color: var(--color--primary)
+  color: var(--color--secondary)
 }
 
 .btn {
   padding: 5px;
   color: inherit;
   border-color : inherit;
-}
-
-.btn-default {
-  background-color: var(--color--accent);
-  color: #fff;
-  border-color: var(--color--secondary);
 }
 
 .btn-default:focus, .btn-default:focus-visible, .btn-default:visited {
@@ -81,19 +87,6 @@ h1 {
   }
 }
 
-
-.App {
-  width: 100%;
-  border-radius: var(--border--radius);
-  background-color: var(--color--secondary);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 10px;
-  padding: 20px;
-  justify-content: center;
-}
-
 .Buttons {
   grid-column: auto;
 }
@@ -107,7 +100,7 @@ h1 {
 }
 
 a, p, hr, label {
-  color: var(--color--primary);
+  color: var(--color--secondary);
 }
 
 .footer {

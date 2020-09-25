@@ -41,7 +41,7 @@ describe('Text Elements', () => {
       .should('have.value', 'Right')
   })
 
-  it.only('RadioButton', () => {
+  it('RadioButton', () => {
     cy.get("#formSexoFem")
       .click()
       .should('be.checked')
@@ -49,5 +49,16 @@ describe('Text Elements', () => {
     cy.get("#formSexMasc").should('not.be.checked')
     cy.get("[name='sexo']").should('have.length', 2)
 
+  })
+
+  it('CheckBox', () => {
+    cy.get("#formCalabresa")
+      .click()
+      .should('be.checked')
+
+      cy.get('[name=pizza]').click({ multiple: true })
+      // this one was already selected
+      cy.get('#formCalabresa').should('not.be.checked')
+      cy.get('#formMuzzarela').should('be.checked')
   })
 })
