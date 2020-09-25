@@ -40,4 +40,14 @@ describe('Text Elements', () => {
       .type('Wrong{selectall}Right', delay)
       .should('have.value', 'Right')
   })
+
+  it.only('RadioButton', () => {
+    cy.get("#formSexoFem")
+      .click()
+      .should('be.checked')
+
+    cy.get("#formSexMasc").should('not.be.checked')
+    cy.get("[name='sexo']").should('have.length', 2)
+
+  })
 })

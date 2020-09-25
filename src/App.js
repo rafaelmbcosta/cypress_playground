@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Buttons from './components/Buttons';
+import Buttons from './components/FormComponents/Buttons';
 import Footer from './components/Footer';
 import Form from './components/Form';
 

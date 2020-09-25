@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Buttons.css';
 
 export default () => {
   const [showText, setShowText] = useState('');

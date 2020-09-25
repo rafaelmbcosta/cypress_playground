@@ -19,8 +19,9 @@ describe('Interact with elements', () => {
   it('click', () => {
     cy.visit(local)
 
-    cy.get('#buttonBasic').should('have.value', 'CLICK ME !')
+    cy.get('#buttonBasic')
+      .should('have.text', 'CLICK ME !')
     cy.get('#buttonBasic').click()
-    cy.get('#buttonBasic').should('have.value', 'THANKS !')
+    cy.get('#buttonBasic').should('have.text', 'THANKS !')
   })
 })

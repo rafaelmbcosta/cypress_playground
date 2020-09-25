@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button } from '@material-ui/core';
+import { AccentButton } from '../styled/styledComponents';
+
 
 export default () => {
   const [basicText, setBasicText] = useState('CLICK ME !');
@@ -10,7 +11,7 @@ export default () => {
 
   return(
     <div>
-      <Button variant="contained" id="buttonBasic" onClick={() => changeText() }>{basicText}</Button>
+      <AccentButton id="buttonBasic" onClick={() => changeText() }>{basicText}</AccentButton>
     </div>
   )
 }

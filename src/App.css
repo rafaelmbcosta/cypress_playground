@@ -65,6 +65,23 @@ h1 {
   justify-content: center;
 }
 
+@media(min-width: 1024px) {
+  .container {
+    grid-template-columns: 40%;
+  }
+}
+@media(min-width: 600px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 80%;
+  }
+}
+@media(max-width: 599px) {
+  .container {
+    grid-template-columns: 100%;
+  }
+}
+
+
 .App {
   width: 100%;
   border-radius: var(--border--radius);
