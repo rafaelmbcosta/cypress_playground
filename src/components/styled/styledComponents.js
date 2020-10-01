@@ -6,6 +6,19 @@ export const AccentButton = styled(Button)`
   color: var(--color--form) !important;
 `;
 
+export const SecondaryButton = styled(Button)`
+  background-color: var(--color--secondary) !important;
+  color: var(--color--form) !important;
+  margin: 0px 5px !important;
+`;
+
+export const ButtonList = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+
 export const AppCard = styled(Card)`
   width: 100%;
   border-radius: var(--border--radius);

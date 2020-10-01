@@ -12,6 +12,7 @@ form {
     grid-template-rows: auto;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
+    align-items: center;
   }
 }
 

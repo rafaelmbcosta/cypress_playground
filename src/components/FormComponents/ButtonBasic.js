@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AccentButton } from '../styled/styledComponents';
+import { SecondaryButton } from '../styled/styledComponents';
 
 
 export default () => {
@@ -9,9 +9,5 @@ export default () => {
     setBasicText('THANKS !')
   }
 
-  return(
-    <div>
-      <AccentButton id="buttonBasic" onClick={() => changeText() }>{basicText}</AccentButton>
-    </div>
-  )
+  return <SecondaryButton id="buttonBasic" onClick={() => changeText() }>{basicText}</SecondaryButton>;
 }

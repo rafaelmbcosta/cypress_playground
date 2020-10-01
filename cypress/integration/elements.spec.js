@@ -10,6 +10,7 @@ describe('Text Elements', () => {
   beforeEach(() => {
     cy.reload();
   })
+
   it('find text', () => {
     cy.get('body').should('contain', 'PLAYGROUND')
     cy.get('h1').should('contain', 'PLAYGROUND')
@@ -57,8 +58,17 @@ describe('Text Elements', () => {
       .should('be.checked')
 
       cy.get('[name=pizza]').click({ multiple: true })
-      // this one was already selected
       cy.get('#formCalabresa').should('not.be.checked')
       cy.get('#formMuzzarela').should('be.checked')
+  })
+
+  it('Combo (selects)', () => {
+    cy.get('#mui-component-select-celeste').click().get('#celeste-ruby').click().should('have.text', 'Ruby')
+    cy.get('#mui-component-select-celeste').click().get('#celeste-javascript').click().should('have.text', 'Javascript')
+    cy.get('#mui-component-select-celeste').click().get('#celeste-python').click().should('have.text', 'Python')
+    cy.get('#mui-component-select-celeste').click().get('#celeste-c').click().should('have.text', 'C++')
+    cy.get('#mui-component-select-celeste').click().get('#celeste-c').click().should('not.have.text', 'Ruby')
+    // Normal select (not material)
+    // cy.get('[name=celeste]').select('c++').should('have.value', 'c++')
   })
 })
