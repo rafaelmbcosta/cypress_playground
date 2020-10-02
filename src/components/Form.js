@@ -2,15 +2,25 @@ import React, { useState } from 'react';
 import './Form.css';
 import { TextField } from "@material-ui/core";
 import { Radio, Checkbox, Select, MenuItem } from '@material-ui/core'
-import { AccentButton,  CheckBoxes } from './styled/styledComponents'
+import { AccentButton,  CheckBoxes, FullTextField } from './styled/styledComponents'
+import { useSelector } from 'react-redux'
+import { selectButtonState } from './FormComponents/delayerButtonSlice'
 
 export default () => {
   const [radio, setRadio] = useState();
   const [language, setLanguage] = useState('');
+  const buttonState = useSelector(selectButtonState)
 
   const handleSelectChange = (event) => {
     setLanguage(event.target.value);
   }
+
+  const showDelayedText = () => {
+    if (buttonState.show) {
+      return <FullTextField id="delayed-text" margin="dense" variant="outlined" placeholder="Called from delayed button" />;
+    }
+  }
+
   return(
     <form>
       <label>FIRST NAME:</label>
@@ -18,7 +28,7 @@ export default () => {
       <label>LAST NAME:</label>
       <TextField id="formLastName" margin="dense" variant="outlined"></TextField>
       <label>DESCRIPTION:</label>
-      <TextField id="formDescription"  margin="dense" variant="outlined"></TextField>
+      <TextField id="formDescription" margin="dense" variant="outlined"></TextField>
       <label>SEXO:</label>
       <div className="radios">
         <span><Radio checked={radio === 'masculino'} value="masculino" name="sexo" id="formSexoMasc" text="Masculino"  onChange={(e) => setRadio(e.target.value)}/>Masculino</span>
@@ -44,6 +54,7 @@ export default () => {
         <MenuItem id="celeste-javascript" value="javascript">Javascript</MenuItem>
         <MenuItem id="celeste-c" value="c++">C++</MenuItem>
       </Select>
+      { showDelayedText() }
       <AccentButton variant="contained" className="btnForm">SUBMIT</AccentButton>
 
     </form>

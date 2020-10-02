@@ -1,4 +1,4 @@
-import { Button, Card } from '@material-ui/core'
+import { Button, Card, TextField } from '@material-ui/core'
 import styled from 'styled-components'
 
 export const AccentButton = styled(Button)`
@@ -17,6 +17,10 @@ export const ButtonList = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+`;
+
+export const FullTextField = styled(TextField)`
+  grid-column-start: span 2;
 `;
 
 export const AppCard = styled(Card)`
