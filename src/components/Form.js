@@ -41,7 +41,7 @@ export default () => {
         <Checkbox type="checkbox" name="pizza" value="marguerita" id="formMarguerita" /> Marguerita
         <Checkbox type="checkbox" name="pizza" value="muzzarela" id="formMuzzarela" /> Muzzarela
       </CheckBoxes>
-      <label>BEST PROGRAMMING LANGUAGE? {language}</label>
+      <label>BEST PROGRAMING LANGUAGE?</label>
       <Select
         name="celeste"
         margin="dense"
