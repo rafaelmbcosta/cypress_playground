@@ -42,14 +42,22 @@ describe('Text Elements', () => {
       .should('have.value', 'Right')
   })
 
-  it('RadioButton', () => {
-    cy.get("#formSexoFem")
+  it.only('RadioButton', () => {
+    cy.get("#formGenderFem")
       .click()
       .should('be.checked')
 
-    cy.get("#formSexMasc").should('not.be.checked')
-    cy.get("[name='sexo']").should('have.length', 2)
+    cy.get("#formGenderMasc").should('not.be.checked')
+    cy.get("[name='gender']").should('have.length', 2)
 
+    cy.get('[name=gender]').then(arr => {
+      let values = []
+      arr.each(function() {
+        values.push(this.value)
+      })
+      expect(values).to.include.members(['male', 'female'])
+    })
+    // .invoke('val').should('eql', ['male', 'female'])
   })
 
   it('CheckBox', () => {

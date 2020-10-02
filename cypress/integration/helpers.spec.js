@@ -44,4 +44,25 @@ describe('Helpers', () => {
       return 2
     }).should('be.equal', 1)
   })
+
+  it('Its', () => {
+    const obj = { name: 'User', age: 20, address: { street: 'golden street' } }
+    cy.wrap(obj).should('have.property', 'name', 'User')
+    cy.wrap(obj).its('name').should('be.equal', 'User')
+    cy.wrap(obj).its('address').should('have.property', 'street')
+    cy.wrap(obj).its('address').its('street').should('contain', 'golden')
+    cy.wrap(obj).its('address.street').should('contain', 'golden')
+
+    cy.title().its('length').should('be.equal', 13)
+  })
+
+  it('Inoke', () => {
+    const invokeText = 'Text through invoke'
+    const getValue = () => 1;
+    const sum = (a,b) => a + b;
+    cy.wrap({ fn: getValue }).invoke('fn').should('be.equal', 1)
+    cy.wrap({ fn: sum }).invoke('fn', 2, 5).should('be.equal', 7)
+    cy.get('#formFirstName').invoke('val', invokeText).should('have.value', invokeText)
+    cy.window().invoke('alert', 'Hello!')
+  })
 })
