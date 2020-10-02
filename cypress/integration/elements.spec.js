@@ -42,7 +42,7 @@ describe('Text Elements', () => {
       .should('have.value', 'Right')
   })
 
-  it.only('RadioButton', () => {
+  it('RadioButton', () => {
     cy.get("#formGenderFem")
       .click()
       .should('be.checked')
