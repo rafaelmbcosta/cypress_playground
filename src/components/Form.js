@@ -9,7 +9,8 @@ import { selectButtonState } from './FormComponents/delayerButtonSlice'
 export default () => {
   const [radio, setRadio] = useState();
   const [language, setLanguage] = useState('');
-  const buttonState = useSelector(selectButtonState)
+  const [confirm, setConfirm] = useState(false);
+  const buttonState = useSelector(selectButtonState);
 
   const handleSelectChange = (event) => {
     setLanguage(event.target.value);
@@ -19,6 +20,10 @@ export default () => {
     if (buttonState.show) {
       return <FullTextField id="delayed-text" margin="dense" variant="outlined" placeholder="Called from delayed button" />;
     }
+  }
+
+  const confirmationText = () => {
+    if (confirm) { return <h4 id="result">Success !</h4>; }
   }
 
   return(
@@ -49,14 +54,14 @@ export default () => {
         value={language}
         onChange={handleSelectChange}
       >
-        <MenuItem id="celeste-ruby" value="ruby">Ruby</MenuItem>
-        <MenuItem id="celeste-python" value="python">Python</MenuItem>
-        <MenuItem id="celeste-javascript" value="javascript">Javascript</MenuItem>
-        <MenuItem id="celeste-c" value="c++">C++</MenuItem>
+        <MenuItem name="languages" id="celeste-ruby" value="ruby">Ruby</MenuItem>
+        <MenuItem name="languages" id="celeste-python" value="python">Python</MenuItem>
+        <MenuItem name="languages" id="celeste-javascript" value="javascript">Javascript</MenuItem>
+        <MenuItem name="languages" id="celeste-c" value="c++">C++</MenuItem>
       </Select>
       { showDelayedText() }
-      <AccentButton variant="contained" className="btnForm">SUBMIT</AccentButton>
-
+      <AccentButton variant="contained" id="formSubmit" className="btnForm" onClick={() => setConfirm(true)}>SUBMIT</AccentButton>
+      { confirmationText() }
     </form>
   )
 }

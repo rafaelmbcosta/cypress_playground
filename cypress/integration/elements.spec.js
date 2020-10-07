@@ -70,7 +70,7 @@ describe('Text Elements', () => {
       cy.get('#formMuzzarela').should('be.checked')
   })
 
-  it('Combo (selects)', () => {
+  it.only('Combo (selects)', () => {
     cy.get('#mui-component-select-celeste').click().get('#celeste-ruby').click().should('have.text', 'Ruby')
     cy.get('#mui-component-select-celeste').click().get('#celeste-javascript').click().should('have.text', 'Javascript')
     cy.get('#mui-component-select-celeste').click().get('#celeste-python').click().should('have.text', 'Python')
