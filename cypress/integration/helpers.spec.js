@@ -8,7 +8,6 @@ describe('Helpers', () => {
   beforeEach(() => {
     cy.reload();
   })
-
   it('Wrap basic', () => {
     const obj = { name: 'User', age: 20}
     expect(obj).to.have.property('name', 'User')
