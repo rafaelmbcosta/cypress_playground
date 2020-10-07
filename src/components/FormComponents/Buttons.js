@@ -1,8 +1,9 @@
 import React from 'react';
-import ButtonBasic from './ButtonBasic';
-import DelayedButton from './DelayedButton';
-import AlertButton from './AlertButton';
-import ConfirmButton from './ConfirmButton';
+import ButtonBasic from './Buttons/ButtonBasic';
+import DelayedButton from './Buttons/DelayedButton';
+import AlertButton from './Buttons/AlertButton';
+import TimeButton from './Buttons/TimeButton';
+import ConfirmButton from './Buttons/ConfirmButton';
 import { ButtonList } from '../styled/styledComponents';
 
 const Buttons = () => {
@@ -12,6 +13,7 @@ const Buttons = () => {
       <DelayedButton />
       <AlertButton />
       <ConfirmButton />
+      <TimeButton />
     </ButtonList>
   );
 }

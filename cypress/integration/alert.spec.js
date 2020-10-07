@@ -18,6 +18,12 @@ describe('Alerts', () => {
     })
   })
 
+
+  it('alert with commands', () => {
+    cy.clickAlert('#alert', 'Hello there')
+  })
+
+
   it('show alert with stub', () => {
     const stub = cy.stub().as('alerty')
     cy.on('window:alert', stub)

@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import './Form.css';
 import { TextField } from "@material-ui/core";
 import { Radio, Checkbox, Select, MenuItem } from '@material-ui/core'
-import { AccentButton,  CheckBoxes, FullTextField } from './styled/styledComponents'
+import { AccentButton,  CheckBoxes, FullTextField, FullLabel } from './styled/styledComponents'
 import { useSelector } from 'react-redux'
-import { selectButtonState } from './FormComponents/delayerButtonSlice'
+import { selectButtonState } from './FormComponents/Buttons/delayedButtonSlice'
+import { selectTime } from './FormComponents/Buttons/timeButtonSlice'
 
 export default () => {
   const [radio, setRadio] = useState();
   const [language, setLanguage] = useState('');
   const [confirm, setConfirm] = useState(false);
   const buttonState = useSelector(selectButtonState);
+  const time = useSelector(selectTime);
 
   const handleSelectChange = (event) => {
     setLanguage(event.target.value);
@@ -23,7 +25,7 @@ export default () => {
   }
 
   const confirmationText = () => {
-    if (confirm) { return <h4 id="result">Success !</h4>; }
+    if (confirm) { return <FullLabel id="result">Success !</FullLabel>; }
   }
 
   return(
@@ -62,6 +64,7 @@ export default () => {
       { showDelayedText() }
       <AccentButton variant="contained" id="formSubmit" className="btnForm" onClick={() => setConfirm(true)}>SUBMIT</AccentButton>
       { confirmationText() }
+      <FullLabel id="time-result">{ time }</FullLabel>
     </form>
   )
 }

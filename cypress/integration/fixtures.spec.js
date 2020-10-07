@@ -3,7 +3,7 @@
 const delay = { delay: 200 }
 
 describe('Fixtures', () => {
-  it.only('get data from fixture file', () => {
+  it('get data from fixture file', () => {
     cy.visit('http://localhost:3000')
     cy.fixture('formData').then((data) => {
       cy.get('#formFirstName').type(data.firstName, delay)

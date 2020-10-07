@@ -11,6 +11,13 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
+Cypress.Commands.add("clickAlert", (locator, message) => {
+  cy.get(locator).click()
+  cy.on('window:alert', msg => {
+    expect(msg).to.be.equal(message)
+  })
+})
+
 //
 //
 // -- This is a child command --

@@ -1,7 +1,7 @@
 import React from 'react';
-import { SecondaryButton } from '../styled/styledComponents'
+import { SecondaryButton } from '../../styled/styledComponents'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectButtonState, setButtonStateAsync } from './delayerButtonSlice';
+import { selectButtonState, setButtonStateAsync } from './delayedButtonSlice';
 
 const DelayedButton = () => {
   const dispatch = useDispatch();

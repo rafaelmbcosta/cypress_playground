@@ -1,12 +1,12 @@
 ### DESCRIPTION
 
-App created for me to play with cypress, using local react and css grid
+Project created for cypress studies, It's a React app with tests
 
 ### HOW TO RUN
 
 1. Install Dependencies
 ```
-npm install
+yarn
 ```
 
 2. Run server

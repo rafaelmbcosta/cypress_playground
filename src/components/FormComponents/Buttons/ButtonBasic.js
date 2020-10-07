@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SecondaryButton } from '../styled/styledComponents';
+import { SecondaryButton } from '../../styled/styledComponents';
 
 
 export default () => {

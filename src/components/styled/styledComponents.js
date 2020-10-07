@@ -23,6 +23,11 @@ export const FullTextField = styled(TextField)`
   grid-column-start: span 2;
 `;
 
+export const FullLabel = styled.label`
+  grid-column-start: span 2;
+  justify-self: center;
+`
+
 export const AppCard = styled(Card)`
   width: 100%;
   border-radius: var(--border--radius);

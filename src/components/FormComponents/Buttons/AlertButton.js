@@ -1,5 +1,5 @@
 import React from 'react';
-import { SecondaryButton } from '../styled/styledComponents'
+import { SecondaryButton } from '../../styled/styledComponents'
 
 const AlertButton = () => {
   return <SecondaryButton

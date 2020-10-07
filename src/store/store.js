@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import delayerButtonSlice from '../components/FormComponents/delayerButtonSlice'
+import delayedButtonSlice from '../components/FormComponents/Buttons/delayedButtonSlice'
+import timeButtonSlice from '../components/FormComponents/Buttons/timeButtonSlice'
 
 const store = configureStore({
   reducer: {
-    delayedButton: delayerButtonSlice
+    delayedButton: delayedButtonSlice,
+    timeButton: timeButtonSlice
   }
 })
 
