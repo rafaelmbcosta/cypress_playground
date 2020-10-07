@@ -12,6 +12,11 @@ describe('Cypress Basics', () => {
     cy.title()
       .should('be.equal', 'Cy Playground')
       .and('contain', 'Cy')
+
+    cy.title().then(title => {
+      console.log(title)
+      cy.get('#formDescription').type(title).should('have.value', title)
+    })
   })
 })
 
@@ -24,4 +29,5 @@ describe('Interact with elements', () => {
     cy.get('#buttonBasic').click()
     cy.get('#buttonBasic').should('have.text', 'THANKS !')
   })
+
 })

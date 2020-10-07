@@ -29,10 +29,10 @@ export default () => {
       <TextField id="formLastName" margin="dense" variant="outlined"></TextField>
       <label>DESCRIPTION:</label>
       <TextField id="formDescription" margin="dense" variant="outlined"></TextField>
-      <label>SEXO:</label>
+      <label>GENDER:</label>
       <div className="radios">
-        <span><Radio checked={radio === 'masculino'} value="masculino" name="sexo" id="formSexoMasc" text="Masculino"  onChange={(e) => setRadio(e.target.value)}/>Masculino</span>
-        <span><Radio checked={radio === 'feminino'} value="feminino" name="sexo" id="formSexoFem" text="Feminino" onChange={(e) => setRadio(e.target.value)}/>Feminino</span>
+        <span><Radio checked={radio === 'male'} value="male" name="gender" id="formGenderMasc" text="Male"  onChange={(e) => setRadio(e.target.value)}/>Male</span>
+        <span><Radio checked={radio === 'female'} value="female" name="gender" id="formGenderFem" text="Female" onChange={(e) => setRadio(e.target.value)}/>Female</span>
       </div>
       <label>FAVORITE PIZZAS:</label>
       <CheckBoxes>
@@ -41,7 +41,7 @@ export default () => {
         <Checkbox type="checkbox" name="pizza" value="marguerita" id="formMarguerita" /> Marguerita
         <Checkbox type="checkbox" name="pizza" value="muzzarela" id="formMuzzarela" /> Muzzarela
       </CheckBoxes>
-      <label>BEST PROGRAMMING LANGUAGE? {language}</label>
+      <label>BEST PROGRAMING LANGUAGE?</label>
       <Select
         name="celeste"
         margin="dense"
