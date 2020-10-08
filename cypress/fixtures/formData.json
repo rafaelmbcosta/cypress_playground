@@ -1,7 +1,7 @@
 {
   "firstName": "John",
   "lastName": "Doe",
-  "description": "This is the desciption",
+  "description": "This is the description",
   "gender": "male",
   "favoritePizza": "calabresa",
   "language": "javascript"

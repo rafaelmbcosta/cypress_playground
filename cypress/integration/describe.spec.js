@@ -10,7 +10,7 @@ describe('should group tests', () => {
   })
 
   describe('internal group', () => {
-    it.only('even internal test', () => {
+    it('even internal test', () => {
 
     })
   })
