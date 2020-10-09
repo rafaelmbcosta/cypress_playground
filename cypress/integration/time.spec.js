@@ -5,7 +5,7 @@ import { format } from '../../src/components/shared/time';
 const delay = { delay: 100 }
 
 before(() => {
-  cy.visit('http://localhost:3000')
+  cy.visitServer()
 })
 
 beforeEach(() => {

@@ -4,7 +4,7 @@ const delay = { delay: 100 }
 
 describe('Text Elements', () => {
   before(() => {
-    cy.visit('http://localhost:3000')
+    cy.visitServer()
   })
 
   beforeEach(() => {
@@ -70,7 +70,7 @@ describe('Text Elements', () => {
       cy.get('#formMuzzarela').should('be.checked')
   })
 
-  it.only('Combo (selects)', () => {
+  it('Combo (selects)', () => {
     cy.get('#mui-component-select-celeste').click().get('#celeste-ruby').click().should('have.text', 'Ruby')
     cy.get('#mui-component-select-celeste').click().get('#celeste-javascript').click().should('have.text', 'Javascript')
     cy.get('#mui-component-select-celeste').click().get('#celeste-python').click().should('have.text', 'Python')
