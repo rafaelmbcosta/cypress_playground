@@ -6,5 +6,5 @@ Cypress.Commands.add("clickAlert", (locator, message) => {
 })
 
 Cypress.Commands.add("visitServer", (locator, message) => {
-  cy.visit('http://localhost:3000')
+  cy.visit(Cypress.env('host'))
 })
