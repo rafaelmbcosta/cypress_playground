@@ -11,10 +11,10 @@ yarn
 
 2. Run server
 ```
-npm start
+yarn start
 ```
 
 3. Run Cypress
 ```
-npm run cy
+yarn run cy
 ```
