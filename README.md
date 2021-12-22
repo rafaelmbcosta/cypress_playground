@@ -14,7 +14,7 @@ yarn
 yarn start
 ```
 
-3. Run Cypress
+3. Run Cypress (in another terminal)
 ```
 yarn run cy
 ```
